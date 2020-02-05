@@ -9,16 +9,13 @@
 
       # gets the git commit message based on the sha
       #gitmessage=`git log --format=%B -n 1 "$i"`
-      gitmessage= $1
+      gitmessage=$1
       echo "commit text is : " $gitmessage
       # Checks gitmessage for string feat, fix, docs and breaking, if the messagecheck var is empty if fails
       messagecheck=`echo $gitmessage | grep "^US[0-9]\{5\}\b"`
       if [ -z "$messagecheck" ]
       then 
-            echo "The commit message failed "
-            echo "Please review the following : "
-            echo " #### "
-            echo "Your commit message must follow the pattern "
+            echo "The commit failed as your commit message must follow the pattern "
             echo "US***** where ***** is numeric"
             echo " #### "
             echo $gitmessage
