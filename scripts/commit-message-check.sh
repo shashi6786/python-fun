@@ -1,5 +1,5 @@
 #!/bin/bash
-
+commit_message_check (){
     echo " Entering checker......."
       # Get the current branch and apply it to a variable
       currentbranch=`git branch | grep \* | cut -d ' ' -f2`
@@ -26,3 +26,6 @@
             echo "commit message passed"
       fi  
       #rm shafile.txt  >/dev/null 2>&1
+}
+
+commit_message_check
