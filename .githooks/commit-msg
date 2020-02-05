@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # Run the script and get the return code if successful of if fails
-./scripts/commit-message-check.sh $1&& rc=$? || rc=$?
+a=$1
+echo "a : $a"
+./scripts/commit-message-check.sh $a && rc=$? || rc=$?
 echo "return code : $rc"
 if [ $rc -eq 1 ]
 then
