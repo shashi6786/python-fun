@@ -6,10 +6,10 @@ commit_message_check (){
       currentbranch=`git branch | grep \* | cut -d ' ' -f2`
 
       # Gets the commits for the current branch and outputs to file
-      git log $currentbranch --pretty=format:"%H" > shafile.txt
+      #git log $currentbranch --pretty=format:"%H" > shafile.txt
 
       # gets the git commit message based on the sha
-      gitmessage=`git log --format=%B -n 1 "$i"`
+      #gitmessage=`git log --format=%B -n 1 "$i"`
       gitmessage= $1
       echo "commit text is : " $gitmessage
       # Checks gitmessage for string feat, fix, docs and breaking, if the messagecheck var is empty if fails
@@ -33,4 +33,4 @@ commit_message_check (){
 }
 
 # Calling the function
-commit_message_check $1
+commit_message_check
