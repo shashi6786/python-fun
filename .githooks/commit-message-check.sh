@@ -19,8 +19,8 @@ commit_message_check (){
             echo "The commit message failed "
             echo "Please review the following : "
             echo " #### "
-            echo "Your commit message must begin with one of the following"
-            echo "[BUGFIX]"
+            echo "Your commit message must follow the pattern "
+            echo "US***** where ***** is numeric"
             echo " #### "
             echo $gitmessage
             #rm shafile.txt >/dev/null 2>&1
@@ -33,4 +33,4 @@ commit_message_check (){
 }
 
 # Calling the function
-commit_message_check 
+commit_message_check $1
