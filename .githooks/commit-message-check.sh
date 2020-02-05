@@ -3,7 +3,6 @@
     echo " Entering checker......."
       # Get the current branch and apply it to a variable
       currentbranch=`git branch | grep \* | cut -d ' ' -f2`
-
       # Gets the commits for the current branch and outputs to file
       #git log $currentbranch --pretty=format:"%H" > shafile.txt
 
