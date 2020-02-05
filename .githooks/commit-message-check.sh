@@ -43,7 +43,7 @@ commit_message_check (){
             echo "'$i' commit message passed"
       fi  
       done
-      rm shafile.txt  >/dev/null 2>&1
+      #rm shafile.txt  >/dev/null 2>&1
 }
 
 # Calling the function
