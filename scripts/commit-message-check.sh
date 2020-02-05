@@ -28,4 +28,4 @@ commit_message_check (){
       #rm shafile.txt  >/dev/null 2>&1
 }
 
-commit_message_check a
+commit_message_check $1
