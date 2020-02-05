@@ -22,11 +22,6 @@ commit_message_check (){
             echo "[BUGFIX]"
             echo " "
       fi
-    
-      # All checks run at the same time by pipeing from one grep to another
-      messagecheck=`echo $gitmessage | grep "\[(BUGFIX|DOCS|FEATURE|TASK)\] .+$"`
-
-
 
       # check to see if the messagecheck var is empty
       if [ -z "$messagecheck" ]
@@ -43,7 +38,7 @@ commit_message_check (){
             echo "'$i' commit message passed"
       fi  
       done
-      #rm shafile.txt  >/dev/null 2>&1
+      rm shafile.txt  >/dev/null 2>&1
 }
 
 # Calling the function
