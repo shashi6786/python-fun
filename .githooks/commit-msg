@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run the script and get the return code if successful of if fails
-a=$1
+a=$($1)
 echo "a : $a"
 ./scripts/commit-message-check.sh $a && rc=$? || rc=$?
 echo "return code : $rc"
