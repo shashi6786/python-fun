@@ -28,9 +28,7 @@ commit_message_check (){
       then  
             echo "The commit message with sha: '$i' failed "
             echo "Please review the following :"
-            echo " "
             echo $gitmessage
-            echo " "
             rm shafile.txt >/dev/null 2>&1
             set -o errexit
       else
