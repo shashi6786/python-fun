@@ -1,7 +1,7 @@
 #!/bin/bash
 
 commit_message_check (){
-    echo " Entering checker..... "
+    echo " Entering checker......"
       # Get the current branch and apply it to a variable
       currentbranch=`git branch | grep \* | cut -d ' ' -f2`
 
