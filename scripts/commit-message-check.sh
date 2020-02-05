@@ -8,9 +8,9 @@ commit_message_check (){
 
       # gets the git commit message based on the sha
       #gitmessage=`git log --format=%B -n 1 "$i"`
-      gitmessage=$a
+      gitmessage=$1
 
-      echo "commit text is : " $gitmessage
+      echo "commit text is :  $gitmessage"
       # Checks gitmessage for string feat, fix, docs and breaking, if the messagecheck var is empty if fails
       messagecheck=`echo $gitmessage | grep "^US[0-9]\{5\}"`
       if [ -z "$messagecheck" ]
@@ -28,4 +28,4 @@ commit_message_check (){
       #rm shafile.txt  >/dev/null 2>&1
 }
 
-commit_message_check $1
+commit_message_check "$1"
