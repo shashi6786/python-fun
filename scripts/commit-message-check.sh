@@ -13,7 +13,6 @@
       echo "commit text is : " $gitmessage
       # Checks gitmessage for string feat, fix, docs and breaking, if the messagecheck var is empty if fails
       messagecheck=`echo $gitmessage | grep "^US[0-9]\{5\}"`
-      
       if [ -z "$messagecheck" ]
       then 
             echo "The commit failed as your commit message must follow the pattern "
