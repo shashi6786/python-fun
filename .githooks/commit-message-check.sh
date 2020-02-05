@@ -22,7 +22,6 @@ commit_message_check (){
             echo "[BUGFIX]"
             echo " "
       fi
-
       # check to see if the messagecheck var is empty
       if [ -z "$messagecheck" ]
       then  
